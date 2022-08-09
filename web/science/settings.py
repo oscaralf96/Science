@@ -44,7 +44,8 @@ DJANGO_APPS = [
 ]
 
 MY_APPS = [
-    'login'
+    'login', 
+    'home'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS

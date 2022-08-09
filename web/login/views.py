@@ -10,38 +10,39 @@ from django.views.decorators.cache import cache_control
 #Models
 from django.contrib.auth.models import User
 
+# Forms
+from .forms import SignupForm
+from django import forms
+
 # Create your views here.
 class LoginView(auth_views.LoginView):
     """Login view."""
 
-    template_name = 'login/login.html'
+    template_name = 'auth/login.html'
 
 
 @login_required
 def logout_view(request):
     logout(request)
-    return redirect('login:login')
+    return redirect('auth:login')
 
-def sign_up(request):
-
+def signup(request):
+    """Sign up view."""
     if request.method == 'POST':
-        username = request.POST['username']
-        passwd = request.POST['password']
-        passwd_confirmation = request.POST['password_confirmation']
+        form = SignupForm(request.POST)
 
-        if passwd != passwd_confirmation:
-            return render(request, 'authentication/signup.html', {'error': 'Password confirmation does not match'})
+        if form.is_valid():
+            form.save()
 
-        try:
-            user = User.objects.create_user(username=username, password=passwd)
-        except IntegrityError:
-            return render(request, 'authentication/signup.html', {'error': 'Username is already in use'})
+            return redirect('auth:login')
+        print(form.errors.get('__all__')[0])
+    else:
+        form = SignupForm()
 
-        user.first_name = request.POST['first_name']
-        user.last_name = request.POST['last_name']
-        user.email = request.POST['username']
-        user.save()
-
-        return redirect('auth:login')
-
-    return render(request, 'login/signup.html')
+    return render(
+        request=request,
+        template_name='auth/signup.html',
+        context={
+            'form': form, 
+        }
+    ) 
