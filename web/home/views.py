@@ -11,4 +11,4 @@ from django.shortcuts import render, redirect
 @login_required
 def main(request):
     
-    return render(request, template_name='home/main.html')
+    return render(request, template_name='home/base.html')

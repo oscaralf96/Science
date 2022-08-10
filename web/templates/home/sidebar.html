@@ -1,0 +1,54 @@
+{% load static %}
+<ul>
+    <div id="item-home-background" class="item-background">
+        <div id ="item-home" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-grid"></i>
+            Home
+        </div>
+    </div>
+
+    <div id="item-user-background" class="item-background">
+        <div id="item-user" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-person"></i>
+            User
+        </div>
+    </div>
+
+    <div id="item-admin-background" class="item-background">
+        <div id="item-admin" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-tools"></i>
+            Admin
+        </div>
+    </div>
+
+    <div id="item-settings-background" class="item-background">
+        <div id="item-settings" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-gear-fill"></i>
+            Settings
+        </div>
+    </div>
+
+    <div id="item-support-background" class="item-background">
+        <div id="item-support" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-megaphone"></i>
+            Support
+        </div>
+    </div>
+
+    <div id="item-quit-background" class="item-background">
+        <div id="item-quit" class="sidebar-item" onclick="page(this)">
+        <i class="bi bi-x-circle"></i>
+            Quit
+        </div>
+    </div>
+
+    <div id="item-comodin-background" class="item-background">
+        <div id="item-comodin" class="sidebar-item" href="{% url 'home:main' %}" onclick="page(this)">
+        <i class="bi bi-music-player-fill"></i>
+            Comodin
+        </div>
+    </div>
+</ul>
+
+
+<script src= "{% static 'js/sidebar.js' %}"></script>
