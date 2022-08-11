@@ -1,5 +1,22 @@
 {% load static %}
-<ul>
+
+
+<div class="sidebar">
+    <div id="item-logo-background" class="">
+        <div id ="item-logo" class="item-logo">
+        <i class="bi bi-tornado"></i>
+            Logo
+        </div>
+    </div>
+
+    <!--<hr class="rounded">-->
+
+    <div id="item-blank1-background" class="item-background">
+        <div id ="item-blank1" class="sidebar-item">
+             <br>
+             <br>
+        </div>
+    </div>
     <div id="item-home-background" class="item-background">
         <div id ="item-home" class="sidebar-item" onclick="page(this)">
         <i class="bi bi-grid"></i>
@@ -48,7 +65,15 @@
             Comodin
         </div>
     </div>
-</ul>
+
+    <div id="item-blank2-background" class="">
+        <div id ="item-blank2" class="sidebar-item">
+             <br>
+             <br>
+             <br>
+        </div>
+    </div>
+</div>
 
 
 <script src= "{% static 'js/sidebar.js' %}"></script>

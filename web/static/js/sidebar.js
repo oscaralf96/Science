@@ -1,234 +1,328 @@
-const sidebar_background = "black";
+const sidebar_background = "rgb(33, 153, 97)";
 const sidebar_color = "white"
+const item_color = "black"
 
 function page(element) {
     switch (element.id) {
-        case "item-home": 
-            element.style.borderRadius = "30px 0px 0px 30px";
+        case "item-home":             
+            document.getElementById("item-blank1-background").style.borderRadius = "35px 0px 0px 35px";
+            document.getElementById("item-blank1-background").style.background = sidebar_color;
+            document.getElementById("item-blank1").style.borderRadius = "0px 0px 25px 0px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color;
             
             document.getElementById("item-user-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-user-background").style.background = sidebar_color;
-            document.getElementById("item-user").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-user").style.borderRadius = "0px 25px 0px 0";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;            
             
-            document.getElementById("item-admin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color;
             
-            document.getElementById("item-settings").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
-            document.getElementById("item-settings").style.color = sidebar_color;
+            document.getElementById("item-settings").style.color = sidebar_color;            
             
-            document.getElementById("item-support").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-support").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color;
             
-            document.getElementById("item-quit").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-quit").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color;
             
-            document.getElementById("item-comodin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('home/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+
             break;
         case "item-user": 
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
             document.getElementById("item-home-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-home-background").style.background = sidebar_color;
-            document.getElementById("item-home").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-home").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;           
+            element.style.color = item_color;           
             
             document.getElementById("item-admin-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-admin-background").style.background = sidebar_color;
-            document.getElementById("item-admin").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-admin").style.borderRadius = "0px 25px 0px 0px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color;
             
-            document.getElementById("item-settings").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
             document.getElementById("item-settings").style.color = sidebar_color;
             
-            document.getElementById("item-support").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-support").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color;
             
-            document.getElementById("item-quit").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-quit").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color;
             
-            document.getElementById("item-comodin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('user/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+
             break;
         case "item-admin":
-            document.getElementById("item-home").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            document.getElementById("item-home").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
             document.getElementById("item-user-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-user-background").style.background = sidebar_color;
-            document.getElementById("item-user").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-user").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;           
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color;
             
             document.getElementById("item-settings-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-settings-background").style.background = sidebar_color;
-            document.getElementById("item-settings").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-settings").style.borderRadius = "0px 25px 0px 0px";
             document.getElementById("item-settings").style.background = sidebar_background;
             document.getElementById("item-settings").style.color = sidebar_color;
             
-            document.getElementById("item-support").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-support").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color;
             
-            document.getElementById("item-quit").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-quit").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color;
             
-            document.getElementById("item-comodin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('administration/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+            
             break;
         case "item-settings":
-            document.getElementById("item-home").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            document.getElementById("item-home").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
-            document.getElementById("item-user").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-user").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;           
             
             document.getElementById("item-admin-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-admin-background").style.background = sidebar_color;
-            document.getElementById("item-admin").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-admin").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color; 
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color;
             
             document.getElementById("item-support-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-support-background").style.background = sidebar_color;
-            document.getElementById("item-support").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-support").style.borderRadius = "0px 25px 0px 0px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color;
             
-            document.getElementById("item-quit").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-quit").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color;
             
-            document.getElementById("item-comodin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('settings/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+            
             break;
         case "item-support":
-            document.getElementById("item-home").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            document.getElementById("item-home").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
-            document.getElementById("item-user").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-user").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;              
             
-            document.getElementById("item-admin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color;                       
             
             document.getElementById("item-settings-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-settings-background").style.background = sidebar_color;
-            document.getElementById("item-settings").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-settings").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-settings").style.background = sidebar_background;
             document.getElementById("item-settings").style.color = sidebar_color; 
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color;
             
             document.getElementById("item-quit-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-quit-background").style.background = sidebar_color;
-            document.getElementById("item-quit").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-quit").style.borderRadius = "0px 25px 0px 0px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color;
             
-            document.getElementById("item-comodin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('support/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+            
             break;
         case "item-quit":
-            document.getElementById("item-home").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            document.getElementById("item-home").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
-            document.getElementById("item-user").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-user").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;              
             
-            document.getElementById("item-admin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color;
             
-            document.getElementById("item-settings").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
             document.getElementById("item-settings").style.color = sidebar_color;
             
             document.getElementById("item-support-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-support-background").style.background = sidebar_color;
-            document.getElementById("item-support").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-support").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color; 
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color;
             
             document.getElementById("item-comodin-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-comodin-background").style.background = sidebar_color;
-            document.getElementById("item-comodin").style.borderRadius = "30px 40px 0px 30px";
+            document.getElementById("item-comodin").style.borderRadius = "0px 25px 0px 0px";
             document.getElementById("item-comodin").style.background = sidebar_background;
             document.getElementById("item-comodin").style.color = sidebar_color;
+            
+            document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            window.location.href='/auth/logout/'
+
             break;
         case "item-comodin":
-            document.getElementById("item-home").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-blank1").style.background = sidebar_background;
+            document.getElementById("item-blank1").style.color = sidebar_color;
+
+            document.getElementById("item-home").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-home").style.background = sidebar_background;
             document.getElementById("item-home").style.color = sidebar_color;
             
-            document.getElementById("item-user").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-user").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;             
             
-            document.getElementById("item-admin").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-admin").style.background = sidebar_background;
             document.getElementById("item-admin").style.color = sidebar_color;
             
-            document.getElementById("item-settings").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
             document.getElementById("item-settings").style.color = sidebar_color;
             
-            document.getElementById("item-support").style.borderRadius = "30px 0px 0px 30px";
+            document.getElementById("item-support").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-support").style.background = sidebar_background;
             document.getElementById("item-support").style.color = sidebar_color;
             
             document.getElementById("item-quit-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-quit-background").style.background = sidebar_color;
-            document.getElementById("item-quit").style.borderRadius = "30px 0px 40px 30px";
+            document.getElementById("item-quit").style.borderRadius = "0px 0px 25px 0px";
             document.getElementById("item-quit").style.background = sidebar_background;
             document.getElementById("item-quit").style.color = sidebar_color; 
             
-            element.style.borderRadius = "30px 0px 0px 30px";
+            element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
-            element.style.color = sidebar_background;
+            element.style.color = item_color; 
+
+            document.getElementById("item-blank2-background").style.borderRadius = "35px 0px 0px 35px";
+            document.getElementById("item-blank2-background").style.background = sidebar_color;
+            document.getElementById("item-blank2").style.borderRadius = "0px 25px 0px 0px";
+            document.getElementById("item-blank2").style.background = sidebar_background;
+            document.getElementById("item-blank2").style.color = sidebar_color;
+
+            fetch('comodin/')
+            .then(response=> response.text())
+            .then(text=> document.getElementById('content').innerHTML = text);
+            
             break;
     }
 }

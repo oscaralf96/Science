@@ -20,6 +20,9 @@ class SignupForm(forms.Form):
         max_length=70,
         widget=forms.PasswordInput()
     )
+    
+    first_name = forms.CharField(min_length=4, max_length=50)
+    last_name = forms.CharField(min_length=4, max_length=50)
 
     def clean_username(self):
         """Username must be unique."""
@@ -32,6 +35,8 @@ class SignupForm(forms.Form):
     def clean(self):
         """Verify password confirmation match."""
         data = super().clean()
+        data['email'] = data['username']
+        print(data)
 
         password = data['password']
         password_confirmation = data['password_confirmation']

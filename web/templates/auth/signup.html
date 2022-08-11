@@ -29,6 +29,22 @@
                             <input type="email" name="username" class="form-control form-control-lg" />
                             <label class="form-label" for="typeEmailX">Email</label>
                         </div>
+                        
+                        {% for error in form.first_name.errors %}
+                            <p class="alert alert-danger">{{ error }}</p>
+                        {% endfor %}
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" name="first_name" class="form-control form-control-lg" />
+                            <label class="form-label" for="typePasswordX">First Name</label>
+                        </div>
+                        
+                        {% for error in form.last_name.errors %}
+                            <p class="alert alert-danger">{{ error }}</p>
+                        {% endfor %}
+                        <div class="form-outline form-white mb-4">
+                            <input type="text" name="last_name" class="form-control form-control-lg" />
+                            <label class="form-label" for="typePasswordX">Last Name</label>
+                        </div>
 
                             {% for error in form.non_field_errors %}
                                     <p class="alert alert-danger">{{ error }} </p>
