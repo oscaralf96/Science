@@ -1,4 +1,4 @@
-const sidebar_background = "rgb(33, 153, 97)";
+const sidebar_background = "rgb(81, 63, 51)";
 const sidebar_color = "white"
 const item_color = "black"
 

@@ -24,9 +24,12 @@
 
                     <label>{{ request.user.first_name }} {{ request.user.last_name }}</label>
                     <div class="data">
-                        <p>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</p><br>
+                        {% comment %} <p>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</p><br> {% endcomment %}
                         <h3>Biography</h3>
-                        <p>{{ request.user.profile.biography }} </p>
+                        <p>
+                            {{ request.user.profile.biography }}<br>
+                            {% lorem 1 %} 
+                        </p>
                     </div>
                 </div>
             

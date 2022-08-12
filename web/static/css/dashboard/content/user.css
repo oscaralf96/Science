@@ -1,6 +1,6 @@
 /* Rounded border */
 hr.rounded {
-    border-top: 4px solid rgb(114, 109, 109);
+    border-top: 4px solid rgb(158, 156, 156);
     border-radius: 5px;
 }
 
@@ -44,4 +44,11 @@ hr.rounded {
     height: 150px;
     overflow: hidden;
     border-radius: 50%;
+}
+
+.data {
+    width: 100%;
+    text-align: justify;
+    padding-left: 200px;
+    padding-right: 200px;
 }
