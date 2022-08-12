@@ -24,12 +24,16 @@
 
                     <label>{{ request.user.first_name }} {{ request.user.last_name }}</label>
                     <div class="data">
-                        <h2>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</h2> <br>
+                        <p>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</p><br>
+                        <h3>Biography</h3>
+                        <p>{{ request.user.profile.biography }} </p>
                     </div>
                 </div>
+            
+            <hr class="rounded">
+
             <h2>Courses</h2> <br>
 
-            {% lorem 10 %}
         </div>
 
 {% endblock %}
