@@ -3,3 +3,45 @@ hr.rounded {
     border-top: 4px solid rgb(114, 109, 109);
     border-radius: 5px;
 }
+
+.nav{    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items:center;
+    column-gap: 50px;
+    font-size: 25px;
+    background-color: white;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+#bell{
+    align-content:end
+  }
+
+#user-photo img{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.p-info{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    column-gap: 50px;
+    font-size: 25px;
+    background-color: white;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.p-info img{
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+}

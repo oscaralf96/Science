@@ -5,6 +5,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 
+# models
+from django.contrib.auth.models import User
+from users.models import Profile
+
 
 # Create your views here.
 
@@ -12,7 +16,7 @@ from django.shortcuts import render, redirect
 def main(request):    
     return render(
         request=request, 
-        template_name='home/base.html', 
+        template_name='home/main.html', 
         context={
         }
     )
@@ -29,7 +33,10 @@ def home(request):
 
     
 @login_required()
-def user(request):    
+def user(request): 
+    
+    profile = request.user.profile
+
     return render(
         request=request, 
         template_name='home/content/user.html', 

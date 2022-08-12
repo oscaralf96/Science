@@ -1,1 +1,16 @@
-Home
+{% extends "auth/base.html" %}
+
+{% load static %}
+
+{% block head_content %}
+<title>Science - Home</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard/content/user.css' %}">
+{% endblock %}
+
+{% block container %}
+
+        {% include 'home/content/nav.html'%}
+
+        <hr class="rounded">
+        
+{% endblock %}

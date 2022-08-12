@@ -60,6 +60,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    
+    'science.middleware.ProfileCompletionMiddleware',
 ]
 
 ROOT_URLCONF = 'science.urls'

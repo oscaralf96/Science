@@ -5,6 +5,7 @@ from django import forms
 
 # Models
 from django.contrib.auth.models import User
+from users.models import Profile
 
 
 class SignupForm(forms.Form):
@@ -51,4 +52,6 @@ class SignupForm(forms.Form):
         data.pop('password_confirmation')
 
         user = User.objects.create_user(**data)
+        profile = Profile(user=user)
+        profile.save()
 

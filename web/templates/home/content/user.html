@@ -1,3 +1,35 @@
-User
+{% extends "auth/base.html" %}
 
-<hr class="rounded">
+{% load static %}
+
+{% block head_content %}
+<title>Science - User</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard/content/user.css' %}">
+{% endblock %}
+
+{% block container %}
+
+        {% include 'home/content/nav.html'%}
+
+        <hr class="rounded">
+
+        <div class="content">            
+                <h2>Personal Information</h2> <br>
+                <div class="p-info">
+                    {% if request.user.profile.picture %}
+                        <img src="{{ request.user.profile.picture.url }}" />
+                    {% else %}
+                        <img src="{% static 'img/default-profile-picture.png' %}"/>
+                    {% endif %}
+
+                    <label>{{ request.user.first_name }} {{ request.user.last_name }}</label>
+                    <div class="data">
+                        <h2>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</h2> <br>
+                    </div>
+                </div>
+            <h2>Courses</h2> <br>
+
+            {% lorem 10 %}
+        </div>
+
+{% endblock %}
