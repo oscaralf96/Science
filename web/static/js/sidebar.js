@@ -21,9 +21,9 @@ function page(element) {
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;            
             
-            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color;
+            document.getElementById("item-courses").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color;
             
             document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
@@ -65,11 +65,11 @@ function page(element) {
             element.style.background = sidebar_color;
             element.style.color = item_color;           
             
-            document.getElementById("item-admin-background").style.borderRadius = "35px 0px 0px 35px";
-            document.getElementById("item-admin-background").style.background = sidebar_color;
-            document.getElementById("item-admin").style.borderRadius = "0px 25px 0px 0px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color;
+            document.getElementById("item-courses-background").style.borderRadius = "35px 0px 0px 35px";
+            document.getElementById("item-courses-background").style.background = sidebar_color;
+            document.getElementById("item-courses").style.borderRadius = "0px 25px 0px 0px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color;
             
             document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
@@ -96,7 +96,7 @@ function page(element) {
             .then(text=> document.getElementById('content').innerHTML = text);
 
             break;
-        case "item-admin":
+        case "item-courses":
             document.getElementById("item-blank1").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-blank1").style.background = sidebar_background;
             document.getElementById("item-blank1").style.color = sidebar_color;
@@ -137,7 +137,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('administration/')
+            fetch('courses/')
             .then(response=> response.text())
             .then(text=> document.getElementById('content').innerHTML = text);
             
@@ -155,11 +155,11 @@ function page(element) {
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;           
             
-            document.getElementById("item-admin-background").style.borderRadius = "35px 0px 0px 35px";
-            document.getElementById("item-admin-background").style.background = sidebar_color;
-            document.getElementById("item-admin").style.borderRadius = "0px 0px 25px 0px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color; 
+            document.getElementById("item-courses-background").style.borderRadius = "35px 0px 0px 35px";
+            document.getElementById("item-courses-background").style.background = sidebar_color;
+            document.getElementById("item-courses").style.borderRadius = "0px 0px 25px 0px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color; 
             
             element.style.borderRadius = "25px 0px 0px 25px";
             element.style.background = sidebar_color;
@@ -201,9 +201,9 @@ function page(element) {
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;              
             
-            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color;                       
+            document.getElementById("item-courses").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color;                       
             
             document.getElementById("item-settings-background").style.borderRadius = "35px 0px 0px 35px";
             document.getElementById("item-settings-background").style.background = sidebar_color;
@@ -247,9 +247,9 @@ function page(element) {
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;              
             
-            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color;
+            document.getElementById("item-courses").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color;
             
             document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;
@@ -291,9 +291,9 @@ function page(element) {
             document.getElementById("item-user").style.background = sidebar_background;
             document.getElementById("item-user").style.color = sidebar_color;             
             
-            document.getElementById("item-admin").style.borderRadius = "25px 0px 0px 25px";
-            document.getElementById("item-admin").style.background = sidebar_background;
-            document.getElementById("item-admin").style.color = sidebar_color;
+            document.getElementById("item-courses").style.borderRadius = "25px 0px 0px 25px";
+            document.getElementById("item-courses").style.background = sidebar_background;
+            document.getElementById("item-courses").style.color = sidebar_color;
             
             document.getElementById("item-settings").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-settings").style.background = sidebar_background;

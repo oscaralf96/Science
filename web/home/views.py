@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
+from django.utils.timezone import now, localtime
 
 # models
 from django.contrib.auth.models import User
@@ -46,11 +47,12 @@ def user(request):
 
     
 @login_required()
-def administration(request):    
+def courses(request):    
     return render(
         request=request, 
-        template_name='home/content/administration.html', 
+        template_name='home/content/courses.html', 
         context={
+            'now': now()
         }
     )
 

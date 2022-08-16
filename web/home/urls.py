@@ -16,9 +16,9 @@ urlpatterns = [
         view=views.user,
         name='user'),
     path(
-        route='administration/',
-        view=views.administration,
-        name='administration'),
+        route='courses/',
+        view=views.courses,
+        name='courses'),
     path(
         route='settings/',
         view=views.settings,

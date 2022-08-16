@@ -47,7 +47,8 @@ DJANGO_APPS = [
 MY_APPS = [
     'login', 
     'home',
-    'users'
+    'users',
+    'courses'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS
@@ -126,7 +127,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Guatemala'
+
 
 USE_I18N = True
 
