@@ -11,6 +11,7 @@ from django.contrib.auth.models import User
 from users.models import Profile
 
 
+
 # Create your views here.
 
 @login_required()
@@ -35,8 +36,10 @@ def home(request):
     
 @login_required()
 def user(request): 
-    
-    profile = request.user.profile
+    try:
+        profile = request.user.profile
+    except:
+        profile = None
 
     return render(
         request=request, 
@@ -44,18 +47,6 @@ def user(request):
         context={
         }
     )
-
-    
-@login_required()
-def courses(request):    
-    return render(
-        request=request, 
-        template_name='home/content/courses.html', 
-        context={
-            'now': now()
-        }
-    )
-
     
 @login_required()
 def settings(request):    

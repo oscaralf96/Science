@@ -2,24 +2,31 @@
 {% load static %}
 
 <div class="nav">
-    <div id="nav-blank-space">
+    <div class="nav-hamburguer-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
     </div>
+    <div class="nav-container">
+        <div id="nav-blank-space">
+        </div>
 
-    <div id="bell" class="nav-item">
-        <i class="bi bi-bell"></i>
-    </div>
+        <div id="bell" class="nav-item">
+            <i class="bi bi-bell"></i>
+        </div>
 
-    <div id="username" class="nav-item">
-        {{ request.user.first_name }} {{ request.user.last_name }} 
-    </div>
-    
-    <div id="user-photo" class="nav-item">
-        <a href="{% url 'users:update_profile' %}">
-            {% if request.user.profile.picture %}
-                <img src="{{ request.user.profile.picture.url }}" />
-            {% else %}
-                <img src="{% static 'img/default-profile-picture.png' %}"/>
-            {% endif %}
-        </a>
+        <div id="username" class="nav-item">
+            {{ request.user.first_name }} {{ request.user.last_name }} 
+        </div>
+        
+        <div id="user-photo" class="nav-item">
+            <a href="{% url 'users:update_profile' %}">
+                {% if request.user.profile.picture %}
+                    <img src="{{ request.user.profile.picture.url }}" />
+                {% else %}
+                    <img src="{% static 'img/default-profile-picture.png' %}"/>
+                {% endif %}
+            </a>
+        </div>
     </div>
 </div>

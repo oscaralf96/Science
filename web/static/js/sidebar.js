@@ -2,7 +2,7 @@ const sidebar_background = "rgb(81, 63, 51)";
 const sidebar_color = "white"
 const item_color = "black"
 
-function page(element) {
+function page2(element) {
     switch (element.id) {
         case "item-home":             
             document.getElementById("item-blank1-background").style.borderRadius = "35px 0px 0px 35px";
@@ -44,10 +44,8 @@ function page(element) {
             document.getElementById("item-blank2").style.borderRadius = "25px 0px 0px 25px";
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
-
-            fetch('home/')
-            .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            
+            location.href='/home/';
 
             break;
         case "item-user": 
@@ -91,9 +89,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('user/')
-            .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            location.href='/user/';
 
             break;
         case "item-courses":
@@ -137,9 +133,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('courses/')
-            .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            location.href='/courses/';
             
             break;
         case "item-settings":
@@ -183,9 +177,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('settings/')
-            .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            location.href='/settings/';
             
             break;
         case "item-support":
@@ -229,9 +221,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('support/')
-            .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            location.href='/support/';
             
             break;
         case "item-quit":
@@ -275,7 +265,7 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            window.location.href='/auth/logout/'
+            window.location.href='/auth/logout/';
 
             break;
         case "item-comodin":
@@ -319,10 +309,38 @@ function page(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            fetch('comodin/')
+            /* fetch('comodin/')
             .then(response=> response.text())
-            .then(text=> document.getElementById('content').innerHTML = text);
+            .then(text=> document.getElementById('content').innerHTML = text); */
             
+            window.location.href='/comodin/';
+            
+            break;
+    }
+}
+
+function page(element) {
+    switch (element.id) {
+        case "item-home": 
+            location.href='/home/';
+            break;
+        case "item-user":
+            location.href='/user/';
+            break;
+        case "item-courses":
+            location.href='/courses/';            
+            break;
+        case "item-settings":
+            location.href='/settings/';            
+            break;
+        case "item-support":
+            location.href='/support/';            
+            break;
+        case "item-quit":
+            window.location.href='/auth/logout/';
+            break;
+        case "item-comodin":
+            window.location.href='/comodin/';            
             break;
     }
 }

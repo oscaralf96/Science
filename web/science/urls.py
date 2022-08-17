@@ -24,4 +24,5 @@ urlpatterns = [
     path('', include(('home.urls', 'home'), namespace='home')),
     path('auth/', include(('login.urls', 'auth'), namespace='auth')),
     path('users/', include(('users.urls', 'users'), namespace='users')),
+    path('courses/', include(('courses.urls', 'courses'), namespace='courses')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -1,4 +1,4 @@
-{% extends "auth/base.html" %}
+{% extends "home/main.html" %}
 
 {% load static %}
 
@@ -9,34 +9,34 @@
 
 {% block container %}
 
-        {% include 'home/content/nav.html'%}
+    {% include 'home/content/nav.html'%}
 
+    <hr class="rounded">
+
+    <div class="content">            
+        <h2>Personal Information</h2> <br>
+        <div class="p-info">
+            {% if request.user.profile.picture %}
+                <img src="{{ request.user.profile.picture.url }}" />
+            {% else %}
+                <img src="{% static 'img/default-profile-picture.png' %}"/>
+            {% endif %}
+
+            <label>{{ request.user.first_name }} {{ request.user.last_name }}</label>
+            <div class="data">
+                {% comment %} <p>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</p><br> {% endcomment %}
+                <h3>Biography</h3>
+                <p>
+                    {{ request.user.profile.biography }}<br>
+                    {% lorem 1 %} 
+                </p>
+            </div>
+        </div>
+        
         <hr class="rounded">
 
-        <div class="content">            
-                <h2>Personal Information</h2> <br>
-                <div class="p-info">
-                    {% if request.user.profile.picture %}
-                        <img src="{{ request.user.profile.picture.url }}" />
-                    {% else %}
-                        <img src="{% static 'img/default-profile-picture.png' %}"/>
-                    {% endif %}
+        <h2>Courses</h2> <br>
 
-                    <label>{{ request.user.first_name }} {{ request.user.last_name }}</label>
-                    <div class="data">
-                        {% comment %} <p>{{ request.user.profile.phone_number }} - {{ request.user.profile.website }}</p><br> {% endcomment %}
-                        <h3>Biography</h3>
-                        <p>
-                            {{ request.user.profile.biography }}<br>
-                            {% lorem 1 %} 
-                        </p>
-                    </div>
-                </div>
-            
-            <hr class="rounded">
-
-            <h2>Courses</h2> <br>
-
-        </div>
+    </div>
 
 {% endblock %}
