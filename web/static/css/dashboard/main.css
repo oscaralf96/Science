@@ -2,27 +2,24 @@
 .body {
   background-color: rgb(81, 63, 51);
   font-family: 'Architects Daughter';
-}
-
-/*.wrapper {
-  display: grid;
-  grid-template-columns: 150px auto;
-  grid-template-rows: 100%;
-  gap: 0px;
   overflow: hidden;
-
-}*/
+}
+.wrapper {
+  width: 100%;
+}
 
 .sidebar {
   float:left;
-  width: 10%;
+  width: 200px;
   padding: 0px 0px 0px 6px;
+  transition: 0.5s;
 }
 
 .main-panel {
   float:left;
-  width: 90%;
+  width: calc(100% - 200px);
   padding: 15px 15px 15px 0px;
+  transition: 0.5s;
 }
 
 .panel {
@@ -38,9 +35,15 @@
 }
 
 
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 700px) {
   /* For mobile phones: */
-  .sidebar, .main-panel {
+  .sidebar{  
+    float: none;  
+    position: fixed;
+    width: 0%;
+    visibility:hidden;
+  } 
+  .main-panel {
     width: 100%;
   }
   
