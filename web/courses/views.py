@@ -9,7 +9,7 @@ from django.utils.timezone import now, localtime
 
 # models
 from django.contrib.auth.models import User
-from .models import Science, Course
+from .models import Science, Course, Asignation
 
 
 # Create your views here.
@@ -33,6 +33,19 @@ def all(request):
 def courses(request, science):   
 
     courses = Course.objects.filter(science=Science.objects.get(name=science))
+    courses_active_asignation = Course.objects.raw(
+        """select * from (
+            select id, name, logo, difficulty 
+            from courses_course
+            ) as c 
+            left join (
+                select course_id, active 
+                from courses_asignation 
+                where user_id = 6
+                ) as a 
+            on c.id = a.course_id;
+        """)
+    
 
     return render(
         request=request, 
@@ -40,7 +53,8 @@ def courses(request, science):
         context={
             'now': now(),
             'courses': courses,
-            'science': science
+            'science': science,
+            'active_asignation': courses_active_asignation
         }
     )
     

@@ -9,6 +9,7 @@ from django.utils.timezone import now, localtime
 # models
 from django.contrib.auth.models import User
 from users.models import Profile
+from courses.models import Asignation, Course
 
 
 
@@ -36,15 +37,18 @@ def home(request):
     
 @login_required()
 def user(request): 
+    user = request.user
     try:
-        profile = request.user.profile
+        profile = user.profile
     except:
         profile = None
+    asignated_curses = Asignation.objects.all()
 
     return render(
         request=request, 
         template_name='home/content/user.html', 
         context={
+            'asignated_curses': asignated_curses
         }
     )
     
