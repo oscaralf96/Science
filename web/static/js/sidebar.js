@@ -133,7 +133,7 @@ function page2(element) {
             document.getElementById("item-blank2").style.background = sidebar_background;
             document.getElementById("item-blank2").style.color = sidebar_color;
 
-            location.href='/courses/';
+            location.href='/courses/science/';
             
             break;
         case "item-settings":
@@ -328,7 +328,7 @@ function page(element) {
             location.href='/user/';
             break;
         case "item-courses":
-            location.href='/courses/';            
+            location.href='/courses/science/';            
             break;
         case "item-settings":
             location.href='/settings/';            

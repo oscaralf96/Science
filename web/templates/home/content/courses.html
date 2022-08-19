@@ -17,17 +17,18 @@
         <div class="card-wrapper">
             {% for science in sciences %}
                 <div class="card">
-                    <a href="/courses/{{ science.name }}">
+                    <a href="/courses/show/{{ science.name }}">
                         {% if science.image %}
-                            <img src="{{ science.image.url}}" />
+                            <img src="{{ science.image}}" />
                         {% else %}
                             <img src="{% static 'img/default-profile-picture.png' %}"/>
                         {% endif %}
                     </a>
                     <label>{{ science.name }}</label>
 
-                </div>
+                </div>                
             {% endfor %}
         </div>
-        
+
+        {{sciences.0.image.url}}
 {% endblock %}

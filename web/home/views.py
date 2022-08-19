@@ -42,7 +42,7 @@ def user(request):
         profile = user.profile
     except:
         profile = None
-    asignated_curses = Asignation.objects.all()
+    asignated_curses = Asignation.objects.filter(user=user.id)
 
     return render(
         request=request, 

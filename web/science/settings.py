@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-+r9&3m^)r)!qa$cncgbt4zt1u5jqu&utr=$5hjxea&lk!jdld3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', False)  # True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework'
 ]
 
 MY_APPS = [
@@ -155,3 +156,5 @@ LOGOUT_REDIRECT_URL = LOGIN_URL
 # Necesarios para la ubicacion de archivos multimedia
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+SERVER_URL = "localhost:8020"
