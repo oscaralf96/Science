@@ -18,6 +18,7 @@ from science.settings import SERVER_URL
 import requests
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
+from rest_framework.decorators import api_view
 
 # Create your views here.
 
@@ -30,12 +31,11 @@ def api_courses_list(request):
         serializer = ScienceSerializer(sciences, many=True)
         return JsonResponse(serializer.data, safe=False)
 
-
+@api_view(["POST"])
 @csrf_exempt
 def api_asign_course(request):
     if request.method == 'POST':
-        data = JSONParser().parse(request)
-        serializer = AsignationSerializer(data=data)
+        serializer = AsignationSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return JsonResponse(serializer.data, status=201)
@@ -58,13 +58,13 @@ def all(request):
        
 @login_required()
 def asign_course(request):   
-    endpoint = "http://web:8000/courses/api/list/"
+    endpoint = "http://web:8000/courses/api/asign_course/"
     # print(course)
     data = {
-        'course': Course.objects.get(name=request.GET['course']),
-        'user': request.user
+        'course': request.GET['course'],
+        'user': request.user.username
     }
-    post = requests.post(endpoint,data=data)
+    post = requests.post(endpoint,json=data)
     print(data)
     print(post)
 
