@@ -59,20 +59,16 @@ def all(request):
 @login_required()
 def asign_course(request):   
     endpoint = "http://web:8000/courses/api/list/"
-    # sciences = requests.get(endpoint).json()
-    course = request.GET
-    print(course)
+    # print(course)
+    data = {
+        'course': Course.objects.get(name=request.GET['course']),
+        'user': request.user
+    }
+    post = requests.post(endpoint,data=data)
+    print(data)
+    print(post)
 
-    return HttpResponse("Hola") 
-    # render(
-    #     request=request, 
-    #     template_name='home/content/courses.html', 
-    #     context={
-    #         'now': now(),
-    #         'sciences': sciences
-    #     }
-    # )
-
+    return redirect('courses:all')
     
 def courses(request, science):   
     science_id = Science.objects.get(name=science).id
@@ -104,7 +100,3 @@ def courses(request, science):
         }
     )
     
-
-def asign_course(request):
-    data = request.GET
-    print(data)

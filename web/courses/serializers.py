@@ -11,4 +11,4 @@ class ScienceSerializer(serializers.ModelSerializer):
 class AsignationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Asignation
-        fields = ['user', 'course', 'active']
+        fields = ['user', 'course']
