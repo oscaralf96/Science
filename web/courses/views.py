@@ -44,7 +44,7 @@ def api_asign_course(request):
     
 @login_required()
 def all(request):   
-    endpoint = "http://web:8000/courses/list/"
+    endpoint = "http://web:8000/courses/api/list/"
     sciences = requests.get(endpoint).json()
 
     return render(
@@ -55,6 +55,23 @@ def all(request):
             'sciences': sciences
         }
     )
+       
+@login_required()
+def asign_course(request):   
+    endpoint = "http://web:8000/courses/api/list/"
+    # sciences = requests.get(endpoint).json()
+    course = request.GET
+    print(course)
+
+    return HttpResponse("Hola") 
+    # render(
+    #     request=request, 
+    #     template_name='home/content/courses.html', 
+    #     context={
+    #         'now': now(),
+    #         'sciences': sciences
+    #     }
+    # )
 
     
 def courses(request, science):   

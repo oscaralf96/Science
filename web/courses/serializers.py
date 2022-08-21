@@ -5,10 +5,10 @@ from .models import Science, Asignation
 class ScienceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Science
-        fields = ['id', 'name', 'image']
+        fields = ['name', 'image']
 
 
 class AsignationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Asignation
-        fields = ['id', 'user', 'course', 'active']
+        fields = ['user', 'course', 'active']

@@ -28,7 +28,7 @@
                     {% if course.active %}
                         <label class="asignation_remove">Remove</label>
                     {% else %}
-                        <label class="asignation_add">Add</label>
+                        <label class="asignation_add" onclick="location.href='/courses/asign_course/?course={{course.name}}'">Add</label>
                     {% endif %}
 
                     

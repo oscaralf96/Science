@@ -14,13 +14,18 @@ urlpatterns = [
         name='science'
     ),
     path(
-        route='list/',
-        view=views.api_courses_list,
-        name='sciences'
+        route='asign_course/',
+        view=views.asign_course,
+        name='asign_course'
     ),
     path(
-        route='asign_course/',
+        route='api/list/',
+        view=views.api_courses_list,
+        name='api_sciences'
+    ),
+    path(
+        route='api/asign_course/',
         view=views.api_asign_course,
-        name='asign_course'
+        name='api_asign_course'
     )
 ]
