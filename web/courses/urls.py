@@ -19,13 +19,8 @@ urlpatterns = [
         name='asign_course'
     ),
     path(
-        route='api/list/',
-        view=views.api_courses_list,
-        name='api_sciences'
+        route='remove_course/',
+        view=views.remove_course,
+        name='remove_course'
     ),
-    path(
-        route='api/asign_course/',
-        view=views.api_asign_course,
-        name='api_asign_course'
-    )
 ]

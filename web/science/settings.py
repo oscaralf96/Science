@@ -49,7 +49,8 @@ MY_APPS = [
     'login', 
     'home',
     'users',
-    'courses'
+    'courses',
+    'coursesAPI'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS

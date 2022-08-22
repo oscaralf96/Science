@@ -49,7 +49,7 @@
                         {% endif %}
                     </a>
                     <label>{{ asignation.course.name }}</label>
-                    <label class="asignation_remove">Remove</label>
+                    <label class="asignation_remove" onclick="location.href='/courses/remove_course/?course={{asignation.course.name}}'">Remove</label>
 
                 </div>
             {% endfor %}
