@@ -1,5 +1,11 @@
 .nav {
+    width: calc(100vw - 250px);
+    position: fixed;
+    margin: 0px 0px 0px 15px;
+    background-color:rgba(90, 97, 114, 0.425);
     align-items: center;
+    border-radius: 10px;
+    transition: top 5s;
 }
 
 .nav-hamburguer{
@@ -29,8 +35,6 @@
     display: block;
     height: 32px;
     width: 32px;
-    top: 20px;
-    left: 20px;
     z-index: 5;
     opacity: 0;
     cursor: pointer;
@@ -45,17 +49,17 @@
 }
 
 .nav-hamburguer-lines .line1 {
-transform-origin: 0% 0%;
-transition: transform 0.4s ease-in-out;
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
 }
 
 .nav-hamburguer-lines .line2 {
-transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 .nav-hamburguer-lines .line3 {
-transform-origin: 0% 100%;
-transition: transform 0.4s ease-in-out;
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
 }
 
 .nav-hamburguer input[type="checkbox"]:checked ~ .nav-hamburguer-lines .line1 {
@@ -83,16 +87,12 @@ transition: transform 0.4s ease-in-out;
     align-items:center;
     column-gap: 50px;
     font-size: 25px;
-    background-color: white;
     overflow: hidden;
-
 }
-
 
 #bell{
     align-content:end;
   }
-
   
 #user-photo img{
     width: 50px;
@@ -101,8 +101,18 @@ transition: transform 0.4s ease-in-out;
     border-radius: 50%;
 }
 
+.nav hr.rounded {
+    border-top: 4px solid rgb(158, 156, 156);
+    border-radius: 5px;
+}
 
 @media only screen and (max-width: 700px) {
+    .nav {
+        margin: 0px 0px 0px 0px;
+        width: calc(100vw - 85px);
+        position: fixed;
+        margin: 0px 0px 0px 15px;
+    }
     .nav-hamburguer{
         display: grid;
         opacity: 1;

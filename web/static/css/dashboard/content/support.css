@@ -1,9 +1,3 @@
-/* Rounded border */
-hr.rounded {
-    border-top: 4px solid rgb(158, 156, 156);
-    border-radius: 5px;
-}
-
 /* The navigation menu links */
 .item-background .sidebar-item{
     background-color: rgb(81, 63, 51);

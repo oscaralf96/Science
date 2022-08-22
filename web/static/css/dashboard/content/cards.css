@@ -1,13 +1,11 @@
 
 .card-wrapper {
     display: flex;
-    /* justify-content: center; */
     flex-flow: row wrap;
     align-items:center;
     column-gap: 50px;
     row-gap: 50px;
     font-size: 25px;
-    overflow: hidden;
     padding: 15px;   
     background-color: white; 
 }
@@ -16,11 +14,9 @@
 .card-wrapper .card{
     padding: 6px;
     align-items: center;
-    overflow: hidden;
     border-color: black;
     border-radius: 15%;
     border-width: 2px;
-
 }
 
 

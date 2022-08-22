@@ -2,10 +2,7 @@
 .body {
   background-color: rgb(81, 63, 51);
   font-family: 'Architects Daughter';
-  overflow: hidden;
-}
-.wrapper {
-  width: 100%;
+  overflow: visible;
 }
 
 .sidebar {
@@ -17,21 +14,22 @@
 
 .main-panel {
   float:left;
-  width: calc(100% - 200px);
+  width: calc(100% - 220px);
   padding: 15px 15px 15px 0px;
-  transition: 0.5s;
-}
-
-.panel {
-  background-color: white;
-  padding: 20px 20px 20px 20px;
+  margin: 15px 15px 15px 0px;
   border-radius: 20px 20px 20px 20px;
-  overflow: auto;
+  background-color: white;
+  transition: 0.5s;
+  height: 96vh;
+  overflow:auto;
 }
 
-.panel > div {
-  overflow: auto;
-  height: 92vh ;
+.content {
+  padding: 70px 15px 15px 15px;
+
+}
+
+.content > div {
 }
 
 
@@ -43,14 +41,12 @@
     width: 0%;
     visibility:hidden;
   } 
-  .main-panel {
-    width: 100%;
-  }
   
   .main-panel {
     float:left;
-    width: 100%;
+    width: auto;
     padding: 15px 15px 15px 15px;
+    margin: 15px 15px 15px 15px;
   }
 }
   

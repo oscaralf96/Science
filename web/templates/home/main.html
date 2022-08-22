@@ -21,15 +21,21 @@
     <div class="wrapper">
 
         <div class="sidebar" id="sidebar">
-                {% include 'home/sidebar.html' %}
-        </div>
 
-        <div class="main-panel">
-            <div class="panel">
-                <div id='content'>
+                {% include 'home/sidebar.html' %}
+
+        </div>        
+
+        <div class="main-panel" onscroll="navbar_visibility()">
+
+            {% include 'home/content/nav.html'%}
+
+            <div class="content" id="content">
+
                 {% block container %}{% endblock%}
-                </div>
+                
             </div>
+
         </div>
 
     </div>
