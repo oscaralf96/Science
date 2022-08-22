@@ -61,8 +61,8 @@ def asign_course(request):
     endpoint = "http://web:8000/courses/api/asign_course/"
     # print(course)
     data = {
-        'course': request.GET['course'],
-        'user': request.user.username
+        'course': Course.objects.get(name=request.GET['course']).id,
+        'user': User.objects.get(username=request.user.username).id,
     }
     post = requests.post(endpoint,json=data)
     print(data)
