@@ -23,11 +23,9 @@ class ScienceSerializer(serializers.ModelSerializer):
 
 
 class AsignationSerializer(serializers.ModelSerializer):
-    # user = serializers.Int
+    user = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
+    course = serializers.PrimaryKeyRelatedField(queryset=Course.objects.all())
 
     class Meta:
         model = Asignation
         fields = ['id','active',  'user', 'course']
-
-        def to_representation(self, instace):
-            self.fields['user'] = UserSerializer(read_only=True)
