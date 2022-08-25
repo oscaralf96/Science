@@ -18,7 +18,7 @@ from django import forms
 class LoginView(auth_views.LoginView):
     """Login view."""
 
-    template_name = 'auth/login.html'
+    template_name = 'auth/login2.html'
 
 
 @login_required
@@ -35,13 +35,13 @@ def signup(request):
             form.save()
 
             return redirect('auth:login')
-        print(form.errors.get('__all__')[0])
+        # print(form.errors.get('__all__')[0])
     else:
         form = SignupForm()
 
     return render(
         request=request,
-        template_name='auth/signup.html',
+        template_name='auth/signup2.html',
         context={
             'form': form, 
         }

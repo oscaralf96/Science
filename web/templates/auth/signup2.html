@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+{% load static %}
+<title>Science - Signup</title>
+
+<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/login/base.css' %}">
+{% endblock %}
+
+{% block container %}
+<div class="main">
+       
+</div>
+
+<div class="form-container">
+
+    <h2 class="">Sign up</h2>
+    <p class="">Please enter your info</p>
+    <form method="post" action="{% url 'auth:signup' %}">
+        {% csrf_token %}
+
+        {% for error in form.username.errors %}
+            <p class="alert alert-danger">{{ error }}</p>
+        {% endfor %}
+        <div class="form-block">
+            <input type="email" name="username" class="form-input" />
+            <label class="form-label" for="typeEmailX">Email</label>
+        </div>
+        
+        {% for error in form.first_name.errors %}
+            <p class="alert alert-danger">{{ error }}</p>
+        {% endfor %}
+        <div class="form-block">
+            <input type="text" name="first_name" class="form-input" />
+            <label class="form-label" for="typePasswordX">First Name</label>
+        </div>
+        
+        {% for error in form.last_name.errors %}
+            <p class="alert alert-danger">{{ error }}</p>
+        {% endfor %}
+        <div class="form-block">
+            <input type="text" name="last_name" class="form-input" />
+            <label class="form-label" for="typePasswordX">Last Name</label>
+        </div>
+
+            {% for error in form.non_field_errors %}
+                    <p class="alert alert-danger">{{ error }} </p>
+            {% endfor %}
+        <div class="form-block">
+            <input type="password" name="password" class="form-input" />
+            <label class="form-label" for="typePasswordX">Password</label>
+        </div>
+
+        <div class="form-block">
+            <input type="password" name="password_confirmation" class="form-input" />
+            <label class="form-label" for="typePasswordX">Password Confirmation</label>
+        </div>
+
+        <button class="form-button" type="submit">Sign up</button>
+    </form>
+    
+    <div>
+        <p class="mb-0">Alreay have an account? <a href="{% url 'auth:login' %}" class="text-white-50 fw-bold">Sign in</a>
+        </p>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

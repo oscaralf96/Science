@@ -36,8 +36,6 @@ class SignupForm(forms.Form):
     def clean(self):
         """Verify password confirmation match."""
         data = super().clean()
-        data['email'] = data['username']
-        print(data)
 
         password = data['password']
         password_confirmation = data['password_confirmation']
@@ -49,6 +47,8 @@ class SignupForm(forms.Form):
     def save(self):
         """Create user and profile."""
         data = self.cleaned_data
+        data['email'] = data['username']
+        
         data.pop('password_confirmation')
 
         user = User.objects.create_user(**data)
