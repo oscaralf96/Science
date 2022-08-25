@@ -1,6 +1,6 @@
 /* The navigation menu links */
 .item-background .sidebar-item{
-    background-color: rgb(81, 63, 51);
+    background-color: rgb(24, 87, 112);
     color: white;
     border-radius: 0%;
   }
@@ -14,14 +14,14 @@
 
 #item-user{
     padding: 15px 15px 15px 10px;
-    background-color: rgb(81, 63, 51);
+    background-color: rgb(24, 87, 112);
     border-radius: 20px 0px 25px 20px;
     border-color: white;
 
 }
 
 #item-settings{
-    background-color: rgb(81, 63, 51);
+    background-color: rgb(24, 87, 112);;
     border-radius: 25px 25px 0px 25px;
     border-color: white;
 
