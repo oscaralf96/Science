@@ -50,7 +50,7 @@ MY_APPS = [
     'home',
     'users',
     'courses',
-    'coursesAPI'
+    'API'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS

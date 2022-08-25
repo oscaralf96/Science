@@ -1,0 +1,30 @@
+{% extends "home/main.html" %}
+
+{% load static %}
+
+{% block head_content %}
+<title>Science - Courses</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard/content/courses.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/content/cards.css' %}">
+{% endblock %}
+
+{% block container %}
+
+        <div class="card-wrapper">
+            {% for area in areas %}
+                <div class="card">
+                    <a href="/courses/show/{{ area.name }}">
+                        {% if area.image %}
+                            <img src="{{ area.image}}" />
+                        {% else %}
+                            <img src="{% static 'img/whiteboard.png' %}"/>
+                        {% endif %}
+                    </a>
+                    <label>{{ area.name }}</label>
+
+                </div>                
+            {% endfor %}
+        </div>
+
+        {{areas.0.image.url}}
+{% endblock %}

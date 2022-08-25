@@ -3,28 +3,38 @@
 {% load static %}
 
 {% block head_content %}
-<title>Science - Courses</title>
-    <link rel="stylesheet" href="{% static 'css/dashboard/content/courses.css' %}">
+<title>Science - {{ science }}</title>
     <link rel="stylesheet" href="{% static 'css/dashboard/content/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dashboard/content/courses.css' %}">
 {% endblock %}
 
 {% block container %}
 
         <div class="card-wrapper">
-            {% for science in sciences %}
+            {% for course in active_asignation %}
                 <div class="card">
-                    <a href="/courses/show/{{ science.name }}">
-                        {% if science.image %}
-                            <img src="{{ science.image}}" />
+                    <a href="/courses{{ science }}/{{ course.name }}">
+                        {% if course.logo %}
+                            <img src="{{ course.logo.url}}" />
                         {% else %}
                             <img src="{% static 'img/whiteboard.png' %}"/>
                         {% endif %}
                     </a>
-                    <label>{{ science.name }}</label>
-
-                </div>                
+                    <label class="course_name">{{ course.name }}</label>
+                    {% if course.active %}
+                        <label class="asignation_remove" onclick="location.href='/courses/remove_course/?course={{course.id}}'">Remove</label>
+                    {% else %}
+                        <label class="asignation_add" onclick="location.href='/courses/asign_course/?course={{course.id}}'">Add</label>
+                    {% endif %}
+                    
+                </div>
+                
             {% endfor %}
         </div>
 
-        {{sciences.0.image.url}}
+        {{ course.active }}
+        
+
+
+        
 {% endblock %}

@@ -5,11 +5,11 @@ from . import views
 urlpatterns = [
     path(
         route='science/',
-        view=views.all,
-        name='all'
+        view=views.areas,
+        name='areas'
     ),
     path(
-        route='show/<str:science>/',
+        route='show/<str:area>/',
         view=views.courses,
         name='science'
     ),
@@ -20,7 +20,7 @@ urlpatterns = [
     ),
     path(
         route='remove_course/',
-        view=views.remove_course,
+        view=views.update_course,
         name='remove_course'
     ),
 ]

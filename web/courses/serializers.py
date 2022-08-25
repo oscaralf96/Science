@@ -28,4 +28,4 @@ class AsignationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Asignation
-        fields = ['id','active',  'user', 'course']
+        fields = ['id', 'user', 'course', 'active']

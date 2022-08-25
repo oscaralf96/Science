@@ -25,5 +25,5 @@ urlpatterns = [
     path('auth/', include(('login.urls', 'auth'), namespace='auth')),
     path('users/', include(('users.urls', 'users'), namespace='users')),
     path('courses/', include(('courses.urls', 'courses'), namespace='courses')),
-    path('coursesAPI/', include(('coursesAPI.urls', 'coursesAPI'), namespace='coursesAPI')),
+    path('api/', include(('API.urls', 'API'), namespace='API')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

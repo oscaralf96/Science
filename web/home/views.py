@@ -43,7 +43,7 @@ def user(request):
     except:
         profile = None
     asignated_curses = Asignation.objects.filter(user=user.id)
-
+    
     return render(
         request=request, 
         template_name='home/content/user.html', 
