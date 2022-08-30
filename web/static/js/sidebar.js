@@ -337,7 +337,7 @@ function page(element) {
             location.href='/support/';            
             break;
         case "item-quit":
-            window.location.href='/auth/logout/';
+            window.location.href='/users/logout/';
             break;
         case "item-comodin":
             window.location.href='/comodin/';            

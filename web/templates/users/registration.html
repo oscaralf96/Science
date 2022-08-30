@@ -13,47 +13,45 @@
        
 </div>
 
+
+
 <div class="form-container">
 
     <h2 class="">Sign up</h2>
     <p class="">Please enter your info</p>
-    <form method="post" action="{% url 'auth:signup' %}">
+    <form method="post" action="{% url 'users:registration' %}">
         {% csrf_token %}
 
         {% for error in form.username.errors %}
             <p class="alert alert-danger">{{ error }}</p>
         {% endfor %}
         <div class="form-block">
-            <input type="email" name="username" class="form-input" />
+            <input type="text" name="username" class="form-input" />
+            <label class="form-label" for="typeEmailX">User</label>
+        </div>   
+        
+        {% for error in form.email.errors %}
+            <p class="alert alert-danger">{{ error }}</p>
+        {% endfor %}
+        <div class="form-block">
+            <input type="email" name="email" class="form-input" />
             <label class="form-label" for="typeEmailX">Email</label>
-        </div>
-        
-        {% for error in form.first_name.errors %}
-            <p class="alert alert-danger">{{ error }}</p>
-        {% endfor %}
-        <div class="form-block">
-            <input type="text" name="first_name" class="form-input" />
-            <label class="form-label" for="typePasswordX">First Name</label>
-        </div>
-        
-        {% for error in form.last_name.errors %}
-            <p class="alert alert-danger">{{ error }}</p>
-        {% endfor %}
-        <div class="form-block">
-            <input type="text" name="last_name" class="form-input" />
-            <label class="form-label" for="typePasswordX">Last Name</label>
-        </div>
+        </div>      
 
-            {% for error in form.non_field_errors %}
-                    <p class="alert alert-danger">{{ error }} </p>
-            {% endfor %}
+        {% for error in form.password1.errors %}
+                <p class="alert alert-danger">{{ error }} </p>
+        {% endfor %}
+
+        {% for error in form.password2.errors %}
+                <p class="alert alert-danger">{{ error }} </p>
+        {% endfor %}
         <div class="form-block">
-            <input type="password" name="password" class="form-input" />
+            <input type="password" name="password1" class="form-input" />
             <label class="form-label" for="typePasswordX">Password</label>
         </div>
 
         <div class="form-block">
-            <input type="password" name="password_confirmation" class="form-input" />
+            <input type="password" name="password2" class="form-input" />
             <label class="form-label" for="typePasswordX">Password Confirmation</label>
         </div>
 
@@ -61,7 +59,7 @@
     </form>
     
     <div>
-        <p class="mb-0">Alreay have an account? <a href="{% url 'auth:login' %}" class="text-white-50 fw-bold">Sign in</a>
+        <p class="mb-0">Alreay have an account? <a href="{% url 'users:login' %}" class="text-white-50 fw-bold">Sign in</a>
         </p>
     </div>
 </div>

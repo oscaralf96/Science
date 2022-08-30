@@ -1,6 +1,7 @@
 # Django
 from django.shortcuts import redirect
 from django.urls import reverse
+from users.models import Profile
 
 
 class ProfileCompletionMiddleware:
@@ -18,9 +19,15 @@ class ProfileCompletionMiddleware:
         """Code to be executed for each request before the view is called."""
         if not request.user.is_anonymous:
             if not request.user.is_staff:
-                profile = request.user.profile
+
+                try:
+                    profile = request.user.profile
+                except:
+                    profile = Profile(user=request.user)
+                    profile.save()       
+                                 
                 if not profile.picture:
-                    if request.path not in [reverse('users:update_profile'), reverse('auth:logout')]:
+                    if request.path not in [reverse('users:update_profile'), reverse('users:logout')]:
                         return redirect('users:update_profile')
 
         response = self.get_response(request)

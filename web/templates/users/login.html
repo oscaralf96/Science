@@ -16,11 +16,11 @@
 <div class="form-container">
     <h2 class="">Login</h2>
     <p class="">Please enter your email and password!</p>
-    <form method="post" action="{% url 'auth:login' %}">
+    <form method="post" action="{% url 'users:login' %}">
         {% csrf_token %}
         <div class="">
-            <input type="email" name="username" placeholder="email@email.com" class="form-input" />
-            <label class="form-label" for="typeEmailX">Email</label>
+            <input type="text" name="username" placeholder="User Example" class="form-input" />
+            <label class="form-label" for="typeEmailX">Username</label>
         </div>
 
         <div class="form-block">
@@ -34,7 +34,7 @@
     </form>
     
     <div>
-        <p class="mb-0">Don't have an account? <a href="{% url 'auth:signup' %}" class="">Sign Up</a>
+        <p class="mb-0">Don't have an account? <a href="{% url 'users:registration' %}" class="">Sign Up</a>
         </p>
     </div>
 </div>

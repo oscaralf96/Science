@@ -42,15 +42,17 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'django_registration'
 ]
 
 MY_APPS = [
-    'login', 
+    #'login', 
     'home',
     'users',
     'courses',
-    'API'
+    'API',
+    #'accounts'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + MY_APPS
@@ -150,7 +152,7 @@ STATICFILES_DIRS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LOGIN_URL = '/auth/login/'
+LOGIN_URL = '/users/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = LOGIN_URL
 
@@ -159,3 +161,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 SERVER_URL = "localhost:8020"
+
+# django-registration
+ACCOUNT_ACTIVATION_DAYS = 7  # One day registration
+REGISTRATION_OPEN = True  # set to default value
+REGISTRATION_SALT = "registration"  # set to default value
+
+#emails
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'racsogonzalez30@gmail.com    '
+EMAIL_HOST_PASSWORD = 'fenpnpmsxniepvwc'
+EMAIL_PORT = 587
