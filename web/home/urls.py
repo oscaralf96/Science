@@ -27,4 +27,8 @@ urlpatterns = [
         route='comodin/',
         view=views.comodin,
         name='comodoin'),
+    path(
+        route='vue/',
+        view=views.vue,
+        name='vue'),
 ]

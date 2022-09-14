@@ -81,4 +81,11 @@ def comodin(request):
         }
     )
 
+def vue(request):
+    return render(
+        request=request, 
+        template_name='vue/vue.html', 
+        context={
+        }
+    )
     

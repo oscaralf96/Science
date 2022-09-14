@@ -43,7 +43,8 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_registration'
+    'django_registration',
+    'webpack_loader',
 ]
 
 MY_APPS = [
@@ -143,9 +144,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_ROOT = 'static/'
 STATICFILES_DIRS = (
-    BASE_DIR / "static/",
+    BASE_DIR / "static",
 )
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -173,3 +179,9 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'racsogonzalez30@gmail.com    '
 EMAIL_HOST_PASSWORD = 'fenpnpmsxniepvwc'
 EMAIL_PORT = 587
+
+WEBPACK_LOADER = {
+    'DEFAULT': {
+        'STATS_FILE': os.path.join(BASE_DIR, 'frontend', 'webpack-stats.json'),
+    }
+}

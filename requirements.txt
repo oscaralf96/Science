@@ -8,3 +8,4 @@ pyyaml
 requests
 django-cors-headers
 django-registration
+django-webpack-loader

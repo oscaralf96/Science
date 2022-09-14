@@ -1,0 +1,43 @@
+{
+  "status": "done",
+  "assets": {
+    "css/app.6e662db4.css": {
+      "name": "css/app.6e662db4.css",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\css\\app.6e662db4.css",
+      "publicPath": "http://0.0.0.0:8080/css/app.6e662db4.css"
+    },
+    "js/app.62f6747f.js": {
+      "name": "js/app.62f6747f.js",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\js\\app.62f6747f.js",
+      "publicPath": "http://0.0.0.0:8080/js/app.62f6747f.js"
+    },
+    "js/chunk-vendors.5b6a06b9.js": {
+      "name": "js/chunk-vendors.5b6a06b9.js",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\js\\chunk-vendors.5b6a06b9.js",
+      "publicPath": "http://0.0.0.0:8080/js/chunk-vendors.5b6a06b9.js"
+    },
+    "js/app.62f6747f.js.map": {
+      "name": "js/app.62f6747f.js.map",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\js\\app.62f6747f.js.map",
+      "publicPath": "http://0.0.0.0:8080/js/app.62f6747f.js.map"
+    },
+    "js/chunk-vendors.5b6a06b9.js.map": {
+      "name": "js/chunk-vendors.5b6a06b9.js.map",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\js\\chunk-vendors.5b6a06b9.js.map",
+      "publicPath": "http://0.0.0.0:8080/js/chunk-vendors.5b6a06b9.js.map"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "C:\\Users\\omejia\\Documents\\Python\\aprendizaje\\Django\\Science\\web\\static\\dist\\index.html",
+      "publicPath": "http://0.0.0.0:8080/index.html"
+    }
+  },
+  "chunks": {
+    "app": [
+      "js/chunk-vendors.5b6a06b9.js",
+      "css/app.6e662db4.css",
+      "js/app.62f6747f.js"
+    ]
+  },
+  "publicPath": "http://0.0.0.0:8080/"
+}
