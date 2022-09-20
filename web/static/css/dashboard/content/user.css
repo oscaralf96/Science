@@ -1,6 +1,6 @@
 /* The navigation menu links */
 .item-background .sidebar-item{
-    background-color: rgb(24, 87, 112);
+    background-color: rgb(48, 49, 49);
     color: white;
     border-radius: 0%;
   }
@@ -14,14 +14,14 @@
 
 #item-home{
     padding: 15px 15px 15px 10px;
-    background-color: rgb(24, 87, 112);
+    background-color: rgb(48, 49, 49);
     border-radius: 0px 0px 25px 0px;
     border-color: white;
 
 }
 
 #item-courses{
-    background-color: rgb(24, 87, 112);
+    background-color: rgb(48, 49, 49);
     border-radius: 0px 25px 0px 0px;
     border-color: white;
 

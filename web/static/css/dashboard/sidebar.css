@@ -28,14 +28,14 @@
 }
 
 .sidebar-item.blank1{
-  background-color: rgb(24, 87, 112);
+  background-color: rgb(48, 49, 49);
   border-radius: 0px 0px 25px 0px;
   border-color: white;
 
 }
 
 .sidebar-item.user{
-  background-color: rgb(24, 87, 112);
+  background-color: rgb(48, 49, 49);
   border-radius: 0px 25px 0px 0px;
   border-color: white;
 
